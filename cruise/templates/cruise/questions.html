@@ -1,0 +1,15 @@
+{% extends 'header.html' %}
+{% block content %}
+
+<h2>Questions</h2>
+<ul>
+{% for p in question_list %}
+<li class='aside'><a href="{% url 'detail2' id=p.id %}">Question Title: {{ p.questiontitle }}</a></li>
+    <!-- <li>User: {{ p.user }}</li>
+    <li>Trip: {{ p.trip }}</li>
+    <li>Question Date: {{ p.questiondate }}</li>
+    <li>Questions: {{ p.questiontext }}</li> -->
+    {% endfor %}
+    
+</ul>
+{% endblock %}

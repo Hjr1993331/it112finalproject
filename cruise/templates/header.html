@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+ <html> 
+<head> 
+<title>Hijiri's Travel Agency</title> 
+<!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>  -->
+<style>
+* {
+  margin:0;
+  box-sizing: none;
+  padding: 0;
+}
+
+.header {
+    background: gray;
+    height:150px;
+ }
+
+
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+
+h2 {
+  text-align:center;
+  margin-top:20px;
+  font-size: 2em;
+}
+
+body {
+    background: tan;
+ } 
+
+
+.green {
+  
+  margin-left: 5px;
+  float:left;
+  width:12.1%;
+  list-style-type:none;
+  line-height:50px;
+  text-align: center;
+}
+
+.green a {
+  text-decoration: none;
+  display: block;
+}
+
+.green a:hover {
+  background: #fff;
+}
+
+.nav {
+   background: greenyellow;
+   
+   height:50px;
+ }
+
+.aside  {
+  font-size: 1.4em;
+  margin:30px;
+}
+
+.table {
+  margin:15px;
+}
+
+tr {
+  border-spacing:20px;
+}
+
+button {
+  margin:30px;
+}
+
+p {
+  margin:30px;
+}
+</style>
+</head> 
+<body> 
+  <div class='header'> 
+<h1>Hijiri's Travel Agency</h1>
+  </div>
+<ul class="nav"> 
+<li class='green'><a href="{% url 'traveltypes' %}">TravelTypes</a></li>
+<li class='green'><a href="{% url 'trips' %}">Trips</a></li>
+<li class='green'><a href="{% url 'questions' %}">Questions</a></li>
+<li class='green'><a href="{% url 'newtraveltype' %}">Add Travel Type</a></li>
+<li class='green'><a href="{% url 'newtrip' %}">Add Trips</a></li>
+<li class='green'><a href="{% url 'newquestions' %}">Add Questions</a></li>
+<li class='green'><a href="{% url 'login' %}">Login</a></li>
+<li class='green'><a href="{% url 'logout' %}">Logout</a></li>
+</ul> 
+</div> 
+</nav> 
+<div class="container-fluid"> 
+{% block content %} 
+
+{% endblock content %} 
+</div> 
+</body> 
+</html>

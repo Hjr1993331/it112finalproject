@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+{% block content %}
+
+<h2>Trips</h2>
+<ul>
+{% for p in trip_list %}
+<li class='aside'><a href="{% url 'detail' id=p.id %}">Travel Name {{ p.travelname }}</a></li>
+    <!-- <li>Travel Type {{ p.traveltype }}</li>
+    <li>User: {{ p.user }}</li>
+    <li>Depart: {{ p.dateentered }}</li>
+    <li>Travel Price {{ p.travelprice }}</li>
+    <li>URL: {{ p.reservedurl }}</li>
+    <li>Questions: {{ p.questions }}</li> -->
+    {% endfor %}
+    
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'header.html' %}
+{% block content %}
+
+<h2>Questions Detail</h2>
+<p>Question Title: {{question.questiontitle}}<br/>
+    User: {{question.user}}<br/>
+    Trip: {{question.trip}}<br/>
+    Question Date: {{question.questiondate}}<br/>
+    Questions: {{question.questiontext}}</p>
+{% endblock %}
